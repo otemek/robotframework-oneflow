@@ -17,10 +17,7 @@ jobs:
       - name: Install poetry
         uses: abatilo/actions-poetry@v4
       - name: build package
-        run: |
-          cd .. 
-          ls -l
-          poetry build
+        run: cd ..  $$ ls -l && poetry build
       # retrieve your distributions here
       - name: Publish package distributions to Test PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
