@@ -1,9 +1,6 @@
 name: publish to test pypi
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - setup_workflow
 jobs:
   pypi-publish:
     name: upload release to PyPI
