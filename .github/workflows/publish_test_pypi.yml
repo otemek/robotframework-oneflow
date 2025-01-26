@@ -19,9 +19,9 @@ jobs:
         with:
           python-version: "3.12"
       - name: list dir
-        uses: philips-labs/list-folders-action@v1
+        uses: jayanta525/github-pages-directory-listing@v4.0.0
         with:
-          path: .
+          FOLDER: .
       - name: Install poetry
         run: pip install poetry && poetry build
       # retrieve your distributions here
