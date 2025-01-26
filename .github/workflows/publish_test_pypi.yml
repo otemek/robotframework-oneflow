@@ -10,7 +10,14 @@ jobs:
       # IMPORTANT: this permission is mandatory for Trusted Publishing
       id-token: write
     steps:
+      - name: build package
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install poetry
+        uses: abatilo/actions-poetry@v4
+      - name: build package
+        run: poetry build
       # retrieve your distributions here
-
       - name: Publish package distributions to Test PyPI
         uses: pypa/gh-action-pypi-publish@release/v1
