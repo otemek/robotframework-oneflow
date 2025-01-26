@@ -18,9 +18,10 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: List files in the repository
-        run: |
-          ls ${{ github.workspace }}
+      - name: list dir
+        uses: philips-labs/list-folders-action@v1
+        with:
+          path: .
       - name: Install poetry
         run: pip install poetry && poetry build
       # retrieve your distributions here
