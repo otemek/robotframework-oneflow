@@ -18,4 +18,4 @@ jobs:
       - name: Install poetry and project dependencies
         run: pip install poetry && poetry install 
       - name: Run test
-        run: poetry run robot tests 
+        run: poetry run pytest tests/unit
