@@ -1,12 +1,15 @@
 *** Settings ***
-Documentation    Sample test suite for OneFlow library
+Documentation       Sample test suite for OneFlow library
 
-Library    OneFlow
+Library             OneFlow
 
 
 *** Test Cases ***
 First Should Pass
     No Operation
+
+Second Test Pass
+    Pass Execution    should be passed in that suite
 
 This Should Fail
     Fail    Becasue I said so

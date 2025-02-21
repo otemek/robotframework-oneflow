@@ -1,9 +1,10 @@
 *** Settings ***
-Documentation     Sample suite to skip all tests after parent setup fail
+Documentation       Sample suite to skip all tests after parent setup fail
 
-Library    OneFlow
+Library             OneFlow
 
-Suite Setup    Fail    parent setup failing ++++
+Suite Setup         Fail    parent setup failing ++++
+
 
 *** Test Cases ***
 Should Be Skipped First
